@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // some data we can work with
+
+        const inventors = [
+            { first: 'Bac', last: 'Curie', year: 1987, passed: 1955},
+            { first: 'Nick', last: 'FoFo', year: 1786, passed: 2004},
+            { first: 'Jack', last: 'Faker', year: 2001, passed: 1965},
+            { first: 'Marie', last: 'Karie', year: 1923, passed: 2001},
+            { first: 'Tina', last: 'Guma', year: 1876, passed: 1999},
+            { first: 'Lofi', last: 'Nisa', year: 2004, passed: 1987},
+        ]    
+
+
+        // Array.filter()
+        // 1. filler the list of inventors those who were born in the 1900's
+        const nineteen = inventors.filter(inventer => inventer.year >= 1900 && inventer.year < 2000);
+        console.table(nineteen);
+
+        // Array.map()
+        // 2. Give us an array of inventors' first name and last name
+        const fullnames = inventors.map(inventor => inventor.first + ' ' + inventor.last);
+        console.log(fullnames);
+
+        
+
+    </script>
+</body>
+</html>
